@@ -24,6 +24,16 @@
 
       feedback.classList.remove("success");
 
+      if (nombre.length < 3) {
+      feedback.textContent = "El nombre es muy corto.";
+      return;
+      }
+
+      if (mensaje.length < 5) {
+        feedback.textContent = "El mensaje es muy corto.";
+        return;
+      }
+
       if (!nombre || !email || !mensaje) {
         feedback.textContent = "Por favor completa todos los campos.";
         return;
@@ -53,41 +63,54 @@
     feedback.textContent = "Error al enviar. Intenta de nuevo.";
   })
   .finally(function () {
-    // 🔴 quitar loading
     btn.classList.remove("btn-loading");
     btn.textContent = "ENVIAR COMENTARIOS";
     btn.disabled = false;
   });
 });
 
+function soloLetras(valor) {
+  return valor.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, "");
+}
 
-  var inputNombre = document.getElementById("nombre");
+function limpiarMensaje(valor) {
+  return valor.replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\s]/g, "");
+}
 
-  if (inputNombre) {
-    inputNombre.addEventListener("input", function () {
-      var valor = inputNombre.value.toLowerCase();
+var inputNombre = document.getElementById("nombre");
 
-      valor = valor.split(" ").map(function(p) {
-        return p.charAt(0).toUpperCase() + p.slice(1);
-      }).join(" ");
+if (inputNombre) {
+  inputNombre.addEventListener("input", function () {
+    let valor = inputNombre.value;
 
-      inputNombre.value = valor;
-    });
-  }
+    valor = soloLetras(valor);
 
-  var inputMensaje = document.getElementById("mensaje");
+    valor = valor
+      .toLowerCase()
+      .split(" ")
+      .map(p => p.charAt(0).toUpperCase() + p.slice(1))
+      .join(" ");
 
-  if (inputMensaje) {
-    inputMensaje.addEventListener("input", function () {
-      var valor = inputMensaje.value.toLowerCase();
+    inputNombre.value = valor;
+  });
+}
 
-      if (valor.length > 0) {
-        valor = valor.charAt(0).toUpperCase() + valor.slice(1);
-      }
+var inputMensaje = document.getElementById("mensaje");
 
-      inputMensaje.value = valor;
-    });
-  }
+if (inputMensaje) {
+  inputMensaje.addEventListener("input", function () {
+    let valor = inputMensaje.value;
+
+    valor = limpiarMensaje(valor);
+
+    if (valor.length > 0) {
+      valor = valor.charAt(0).toUpperCase() + valor.slice(1);
+    }
+
+    inputMensaje.value = valor;
+  });
+}
+
 
   document.getElementById("instaBtn").onclick = function(e){
   e.preventDefault();
