@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Cubao';
-  src: url('fonts/Cubao_Free_Regular.otf') format('truetype');
+  src: url('Cubao_Free_Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'quavo';
-  src: url('fonts/QurovaDEMO-Bold-BF67a5c637eed62.otf') format('truetype');
+  src: url('QurovaDEMO-Bold-BF67a5c637eed62.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
