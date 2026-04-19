@@ -1,4 +1,3 @@
-/* MiApp Venezuela – script.js */
 (function () {
   "use strict";
 
@@ -13,6 +12,9 @@
   var feedback = document.getElementById("formFeedback");
 
   if (form) {
+
+    var btn = form.querySelector("button[type='submit']");
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -33,11 +35,31 @@
         return;
       }
 
-      feedback.textContent = "¡Mensaje enviado! Te contactaremos pronto.";
-      feedback.classList.add("success");
-      form.reset();
-    });
-  }
+      btn.classList.add("btn-loading");
+      btn.textContent = "Enviando...";
+      btn.disabled = true;
+
+      emailjs.send("service_m13t7ci", "template_hnhgtmi", {
+        nombre: nombre,
+        email: email,
+        mensaje: mensaje
+      })
+      .then(function () {
+        feedback.textContent = "¡Mensaje enviado correctamente!";
+        feedback.classList.add("success");
+        form.reset();
+      })
+  .catch(function () {
+    feedback.textContent = "Error al enviar. Intenta de nuevo.";
+  })
+  .finally(function () {
+    // 🔴 quitar loading
+    btn.classList.remove("btn-loading");
+    btn.textContent = "ENVIAR COMENTARIOS";
+    btn.disabled = false;
+  });
+});
+
 
   var inputNombre = document.getElementById("nombre");
 
@@ -67,6 +89,39 @@
     });
   }
 
+  document.getElementById("instaBtn").onclick = function(e){
+  e.preventDefault();
+  window.location = "instagram://user?username=arthyllery";
+  setTimeout(() => {
+    window.location = "https://www.instagram.com/arthyllery/";
+  }, 1500);
+  };
+
+  document.getElementById("threadsBtn").onclick = function(e){
+    e.preventDefault();
+    window.location = "threads://user?username=arthyllery";
+    setTimeout(() => {
+      window.location = "https://www.threads.net/@arthyllery";
+    }, 1500);
+  };
+
+  const el = document.querySelector('.hero-text');
+
+  function fitText() {
+    let maxSize = 55;
+    let minSize = 20;
+
+    el.style.fontSize = maxSize + 'px';
+
+    while (el.scrollWidth > el.clientWidth && maxSize > minSize) {
+      maxSize--;
+      el.style.fontSize = maxSize + 'px';
+    }
+  }
+
+  window.addEventListener('load', fitText);
+  window.addEventListener('resize', fitText);
+
   // Scroll suave en navegación (fallback)
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (ev) {
@@ -79,4 +134,6 @@
       }
     });
   });
+
+  }
 })();
