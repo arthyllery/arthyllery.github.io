@@ -421,6 +421,7 @@ button {
   background: var(--red);
   border-radius: var(--radius-card);
   margin-top: clamp(100px, 28vw, 140px);
+  overflow: hidden;
 }
 
 .phone {
@@ -459,17 +460,18 @@ button {
 }
 
 .texto-cuadrodos {
-  position: relative;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  margin: 0;
+  padding: 0 20px;
   text-align: center;
-  font-size: clamp(34px, 11vw, 55px);
-  line-height: 1.1;
-  margin: 0 auto;
-  max-width: 90%;
+  font-size: clamp(30px, 9.5vw, 55px);
+  line-height: 1.12;
   color: #fff;
   font-family: var(--font-brand);
+  z-index: 3;
 }
 
 .section {
@@ -907,14 +909,8 @@ button {
   }
 
   .texto-cuadrodos {
-    z-index: 3;
-    position: relative;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    max-width: 400px;
-    text-align: center;
+    bottom: 12%;
+    padding: 0 24px;
     font-size: clamp(40px, 4vw, 55px);
   }
 
