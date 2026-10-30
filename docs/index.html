@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="only light" />
+  <meta name="theme-color" content="#fcfcfc" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#101010" media="(prefers-color-scheme: dark)" />
+  <title>Guía — Pre Start</title>
+  <meta name="description" content="Guía de Pre Start: widget, fondos, calendario, clasificación y notificaciones." />
+  <link rel="shortcut icon" href="../favicon (4).ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=5" />
+  <link rel="stylesheet" href="docs.css" />
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("prestart_theme");
+        if (theme === "dark" || theme === "light") {
+          document.documentElement.setAttribute("data-theme", theme);
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="PreStart inicio">PreStart</a>
+      <div class="header-actions">
+        <a class="header-back" href="../index.html">Inicio</a>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5,14.0784C20.3003,14.7189 18.9301,15.0821 17.4751,15.0821C12.7491,15.0821 8.91792,11.2509 8.91792,6.52485C8.91792,5.06986 9.28105,3.69968 9.92163,2.5C5.66765,3.49698 2.5,7.31513 2.5,11.8731C2.5,17.1899 6.8101,21.5 12.1269,21.5C16.6849,21.5 20.503,18.3324 21.5,14.0784Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M17,12C17,14.7614 14.7614,17 12,17C9.23858,17 7,14.7614 7,12C7,9.23858 9.23858,7 12,7C14.7614,7 17,9.23858 17,12Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12,2V3.5M12,20.5V22M19.0708,19.0713L18.0101,18.0106M5.98926,5.98926L4.9286,4.9286M22,12H20.5M3.5,12H2M19.0713,4.92871L18.0106,5.98937M5.98975,18.0107L4.92909,19.0714" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="docs-top">
+    <a href="../index.html">← Volver a la página</a>
+  </div>
+
+  <div class="docs-shell">
+    <aside class="docs-nav" aria-label="Secciones de la guía">
+      <p>Guía</p>
+      <a href="#que-es">Qué es Pre Start</a>
+      <a href="#abrir">Abrir la app</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#widget">Añadir el widget</a>
+      <a href="#fondos">Fondos</a>
+      <a href="#calendario">Calendario</a>
+      <a href="#detalle">Detalle de una carrera</a>
+      <a href="#comunidad">Comunidad</a>
+      <a href="#clasificacion">Clasificación</a>
+      <a href="#idioma">Idioma y tema</a>
+      <a href="#notificaciones">Notificaciones</a>
+      <a href="#sin-conexion">Sin conexión</a>
+    </aside>
+
+    <article class="docs-content">
+      <h1>Guía</h1>
+      <p class="docs-lead">Cómo usar Pre Start: el contador de la siguiente carrera, el widget, los fondos, el calendario y la clasificación. Los nombres de botones son los de la app en español.</p>
+
+      <details class="docs-menu">
+        <summary>En esta guía</summary>
+        <nav>
+          <a href="#que-es">Qué es Pre Start</a>
+          <a href="#abrir">Abrir la app</a>
+          <a href="#inicio">Inicio</a>
+          <a href="#widget">Añadir el widget</a>
+          <a href="#fondos">Fondos</a>
+          <a href="#calendario">Calendario</a>
+          <a href="#detalle">Detalle de una carrera</a>
+          <a href="#comunidad">Comunidad</a>
+          <a href="#clasificacion">Clasificación</a>
+          <a href="#idioma">Idioma y tema</a>
+          <a href="#notificaciones">Notificaciones</a>
+          <a href="#sin-conexion">Sin conexión</a>
+        </nav>
+      </details>
+
+      <section id="que-es">
+        <h2>Qué es Pre Start</h2>
+        <p>Pre Start muestra cuánto falta para la siguiente carrera y permite poner ese contador como widget en la pantalla de inicio del teléfono.</p>
+        <p>Dentro de la app también están los fondos de los circuitos, el calendario de la temporada, la comunidad y la clasificación de pilotos y constructores.</p>
+        <p>Requisito: Android 8 o superior. En Android 13 o superior, al abrirla pide permiso para enviar notificaciones.</p>
+      </section>
+
+      <section id="abrir">
+        <h2>Abrir la app</h2>
+        <p>Al abrir, un splash rojo con el logo da paso a Inicio.</p>
+        <div class="shots">
+          <figure>
+            <img src="capturas/10-splash.jpg" alt="Pantalla de apertura de Pre Start" width="640" height="1138" loading="lazy" />
+            <figcaption>Apertura de la app.</figcaption>
+          </figure>
+        </div>
+        <p>Abajo hay una barra con dos pestañas:</p>
+        <ul>
+          <li><strong>Inicio.</strong> Carrera siguiente, widget, fondos, calendario y comunidad.</li>
+          <li><strong>Clasificación.</strong> Pilotos y constructores.</li>
+        </ul>
+        <p>Arriba, en las dos pestañas, están el nombre <strong>Pre Start</strong> y tres botones: notificaciones, tema e idioma.</p>
+        <p>Deslizar hacia abajo actualiza los datos de la pestaña en la que estás.</p>
+        <div class="shots">
+          <figure>
+            <img src="capturas/01-inicio-claro.jpg" alt="Inicio en tema claro" width="640" height="1138" loading="lazy" />
+            <figcaption>Inicio en claro.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/02-inicio-oscuro.jpg" alt="Inicio en tema oscuro" width="640" height="1138" loading="lazy" />
+            <figcaption>Inicio en oscuro.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="inicio">
+        <h2>Inicio</h2>
+        <p>La primera sección se llama <strong>SIGUIENTE CARRERA</strong>.</p>
+        <p>Ahí se ve la vista previa del widget: días, horas, minutos y segundos (D, H, M, S) y el texto <strong>GP de</strong> más el nombre de la carrera. El contador corre en vivo mientras la pestaña está visible.</p>
+        <p>Desde 15 minutos antes de la carrera, y hasta 2 horas después, el contador se sustituye por <strong>YA</strong>.</p>
+        <p>Debajo está el botón rojo <strong>AÑADIR WIDGET</strong>.</p>
+      </section>
+
+      <section id="widget">
+        <h2>Añadir el widget</h2>
+        <p>El widget se llama Pre Start. En el sistema se describe como «¡Contador para la siguiente carrera!».</p>
+        <p>Al pulsar <strong>AÑADIR WIDGET</strong>:</p>
+        <ul>
+          <li>Si el teléfono permite fijar widgets, Android muestra su propia ventana para colocarlo.</li>
+          <li>Si no, la app abre un diálogo <strong>AÑADIR WIDGET</strong> con este texto: «Sigue estos pasos para agregar el widget F1 a tu pantalla principal:»
+            <ol>
+              <li>Mantén presionada la pantalla principal</li>
+              <li>Toca la opción «Widgets»</li>
+              <li>Busca «Pre Start» y mantenlo presionado</li>
+              <li>Arrástralo al lugar que prefieras</li>
+            </ol>
+          </li>
+        </ul>
+        <p>El botón del diálogo es <strong>ENTENDIDO</strong>.</p>
+        <p class="docs-note">Ese diálogo no tiene captura: en el teléfono de estas fotos el sistema sí permite fijar el widget, así que ese diálogo no llega a abrirse. Las ventanas del sistema salen en el idioma del teléfono. En estas fotos el teléfono está en inglés y la app en español.</p>
+        <div class="shots">
+          <figure>
+            <img src="capturas/11-anadir-widget.jpg" alt="Ventana del sistema para colocar el widget" width="640" height="1138" loading="lazy" />
+            <figcaption>Ventana del sistema. El texto de la app es «¡Contador para la siguiente carrera!».</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/12-widget-escritorio.jpg" alt="Widget de Pre Start en la pantalla de inicio" width="640" height="1138" loading="lazy" />
+            <figcaption>El widget ya en la pantalla de inicio.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="fondos">
+        <h2>Fondos</h2>
+        <p>La sección se llama <strong>FONDOS ANTERIORES</strong>. Es una fila horizontal.</p>
+        <ul>
+          <li>Cada carrera ya terminada que tenga fondo aparece con el nombre del país.</li>
+          <li>La carrera en curso, si tiene fondo, aparece al final con la etiqueta <strong>ACTUAL</strong> y un borde rojo.</li>
+          <li>Tocar una tarjeta abre el fondo grande, con el nombre del GP y, si existe, el autor. Se cierra con la X.</li>
+        </ul>
+        <p>Si todavía no hay fondos, en lugar de la fila se lee: «Los fondos se desbloquean luego de cada carrera».</p>
+        <div class="shots">
+          <figure>
+            <img src="capturas/20-fondos-actual.jpg" alt="Fila de fondos con la tarjeta Actual" width="640" height="1138" loading="lazy" />
+            <figcaption>La tarjeta Actual, con borde rojo.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/21-fondo-abierto.jpg" alt="Fondo de un GP abierto a pantalla completa" width="640" height="1138" loading="lazy" />
+            <figcaption>El fondo grande, con el nombre y el autor.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/03-fondos.jpg" alt="Fila de fondos anteriores" width="640" height="1138" loading="lazy" />
+            <figcaption>La misma fila en otra toma.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/04-fondo-abierto.jpg" alt="Fondo abierto" width="640" height="1138" loading="lazy" />
+            <figcaption>Fondo abierto.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="calendario">
+        <h2>Calendario</h2>
+        <p>La sección se llama <strong>CALENDARIO 2026</strong>. A la derecha va el avance, por ejemplo <strong>13/23</strong>: la ronda actual sobre el total de carreras de la lista.</p>
+        <p>Cada fila tiene la fecha, el nombre de la carrera y, si aplica, una etiqueta:</p>
+        <ul>
+          <li><strong>FINALIZADA</strong>, en gris, si la carrera ya pasó.</li>
+          <li><strong>SIGUIENTE</strong>, en rojo, en la próxima.</li>
+          <li>Las demás no llevan etiqueta.</li>
+        </ul>
+        <p>Tocar una fila abre el detalle de esa carrera.</p>
+        <p>La fecha de la fila sale en UTC. La hora local del teléfono o la del circuito se elige dentro del detalle, no en esta lista.</p>
+        <div class="shots">
+          <figure>
+            <img src="capturas/18-calendario-siguiente.jpg" alt="Calendario con la etiqueta Siguiente" width="640" height="1138" loading="lazy" />
+            <figcaption>La etiqueta roja Siguiente.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/05-comunidad.jpg" alt="Final del calendario y sección comunidad" width="640" height="1138" loading="lazy" />
+            <figcaption>El final de la lista, con Abu Dabi, y Comunidad debajo.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="detalle">
+        <h2>Detalle de una carrera</h2>
+        <p>Se abre al tocar una carrera del calendario y se cierra con <strong>CERRAR</strong>. En las fotos es el GP de Australia, como ejemplo de la ventana.</p>
+        <p>Arriba dice <strong>GP de</strong> y el nombre. Hay dos pestañas: <strong>Horarios</strong> y <strong>Circuito</strong>.</p>
+        <h3>Horarios</h3>
+        <ul>
+          <li>La hora grande es la de <strong>CARRERA</strong>, con el día de la semana, el día y el mes.</li>
+          <li>El resto de sesiones va agrupado por día: Libres 1, Libres 2, Libres 3, Qualy Sprint, Sprint y Clasificación. Solo aparecen las que traiga esa carrera.</li>
+          <li>El interruptor <strong>Tu hora</strong> / <strong>Circuito</strong> cambia la zona. Debajo se aclara «Hora local de tu dispositivo» o «Hora local del circuito». La elección se guarda.</li>
+        </ul>
+        <h3>Circuito</h3>
+        <ul>
+          <li>Mapa del trazado, nombre oficial, longitud (km), vueltas, distancia de carrera (km) y año del primer GP.</li>
+          <li>Si no hay ficha: «Aún no hay info de este circuito.»</li>
+          <li>Si el mapa no carga: «El mapa del circuito se fue a boxes.»</li>
+        </ul>
+        <div class="shots">
+          <figure>
+            <img src="capturas/13-detalle-horarios.jpg" alt="Horarios de la carrera en tu hora" width="640" height="1138" loading="lazy" />
+            <figcaption>Horarios en Tu hora.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/14-detalle-hora-circuito.jpg" alt="Horarios en la hora del circuito" width="640" height="1138" loading="lazy" />
+            <figcaption>La misma carrera en hora del circuito.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/15-detalle-circuito.jpg" alt="Mapa y ficha del circuito" width="640" height="1138" loading="lazy" />
+            <figcaption>Mapa y ficha del circuito.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="comunidad">
+        <h2>Comunidad</h2>
+        <p>Está al final de Inicio, bajo el título <strong>COMUNIDAD</strong>.</p>
+        <ul>
+          <li><strong>Apoya el desarrollo.</strong> «Si Pre Start te gusta, una donación ayuda a seguir creando fondos y mejoras.» El botón <strong>DONAR CON PAYPAL</strong> abre una página externa.</li>
+          <li><strong>¿Quieres crear un fondo?</strong> «Manda tu diseño y puede aparecer en la app para todos los fans.» El enlace <strong>ENVIAR MI FONDO</strong> abre un formulario externo.</li>
+          <li><strong>Enviar comentarios.</strong> «Cuéntanos ideas, bugs o lo que quieras mejorar.» El enlace <strong>ESCRIBIR FEEDBACK</strong> abre un formulario dentro de la app.</li>
+        </ul>
+        <p>El formulario pide nombre y mensaje. El botón <strong>ENVIAR</strong> sigue desactivado hasta que ambos tengan texto. El correo es opcional. Hay una casilla <strong>Respuesta anónima</strong>: al marcarla se oculta el correo y aparece la nota «Es importante poner tu correo para poder darte una mejor respuesta.» Mientras sale, el botón dice «Enviando…».</p>
+        <ul>
+          <li>Si llega: «¡Gracias! Tu mensaje ya llegó.»</li>
+          <li>Si falla: «El mensaje se quedó en boxes. Revisa tu conexión e intenta de nuevo.»</li>
+          <li>Un correo con formato inválido muestra «Email inválido».</li>
+        </ul>
+        <p>Debajo está <strong>SÍGUENOS</strong>, con la cuenta <strong>@arthyllery</strong> y los botones de Instagram y Threads.</p>
+        <div class="shots">
+          <figure>
+            <img src="capturas/05-comunidad.jpg" alt="Sección Comunidad" width="640" height="1138" loading="lazy" />
+            <figcaption>Comunidad, con Escribir feedback.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/16-feedback.jpg" alt="Formulario de feedback vacío" width="640" height="1138" loading="lazy" />
+            <figcaption>Formulario vacío. Enviar está desactivado.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/17-feedback-anonimo.jpg" alt="Feedback con respuesta anónima" width="640" height="1138" loading="lazy" />
+            <figcaption>Casilla de respuesta anónima marcada.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="clasificacion">
+        <h2>Clasificación</h2>
+        <p>Pestaña <strong>Clasificación</strong>. Título <strong>CLASIFICACIÓN</strong>. Si hay ronda, debajo dice «Tras la ronda» y el número.</p>
+        <p>Dos segmentos: <strong>Pilotos</strong> y <strong>Constructores</strong>.</p>
+        <p>Si hay resultado reciente, un bloque <strong>ÚLTIMO GP</strong> muestra el nombre de la carrera y los cinco primeros, con posición, piloto, equipo y puntos.</p>
+        <p>Cada fila de la tabla lleva posición, código o nombre, equipo, puntos (<strong>PTS</strong>) y, en constructores, las victorias (<strong>Victorias</strong>).</p>
+        <p>Al entrar, si aún no hay datos, se ven filas en gris que parpadean. Si no hay clasificación: «No hay datos de clasificación por ahora.» Deslizar hacia abajo vuelve a pedir los datos.</p>
+        <div class="shots">
+          <figure>
+            <img src="capturas/06-clasificacion-pilotos.jpg" alt="Clasificación de pilotos" width="640" height="1138" loading="lazy" />
+            <figcaption>Pilotos.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/07-clasificacion-constructores.jpg" alt="Clasificación de constructores" width="640" height="1138" loading="lazy" />
+            <figcaption>Constructores.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="idioma">
+        <h2>Idioma y tema</h2>
+        <p>El botón del globo abre <strong>IDIOMA</strong>. Al elegir uno, la app cambia de inmediato. El botón de abajo es <strong>CERRAR</strong>.</p>
+        <ul>
+          <li>English</li>
+          <li>Español</li>
+          <li>Português (Brasil)</li>
+          <li>Português</li>
+          <li>Deutsch</li>
+          <li>Français</li>
+          <li>Italiano</li>
+        </ul>
+        <p>La primera vez, si el teléfono no tiene uno de esos guardado, abre en español.</p>
+        <p>El botón de la luna o el sol alterna claro y oscuro. La primera vez sigue el tema del sistema; a partir del primer toque queda fijo en claro u oscuro.</p>
+        <div class="shots">
+          <figure>
+            <img src="capturas/08-idioma.jpg" alt="Selector de idioma" width="640" height="1138" loading="lazy" />
+            <figcaption>Selector de idioma.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="notificaciones">
+        <h2>Notificaciones</h2>
+        <p>Al abrir, en Android 13 o superior, el sistema pide permiso de notificaciones. El texto de esa ventana es el del teléfono, no el de la app.</p>
+        <div class="shots">
+          <figure>
+            <img src="capturas/22-permiso-notificaciones.jpg" alt="Permiso de notificaciones de Android" width="640" height="1138" loading="lazy" />
+            <figcaption>En esta foto el teléfono está en inglés.</figcaption>
+          </figure>
+          <figure>
+            <img src="capturas/09-notificaciones.jpg" alt="Ajustes de notificaciones de la app" width="640" height="1138" loading="lazy" />
+            <figcaption>Avisos generales dentro de la app.</figcaption>
+          </figure>
+        </div>
+        <p>El botón de la campana abre <strong>NOTIFICACIONES</strong>, bajo el rótulo <strong>Avisos generales</strong>. Hay dos interruptores, ambos activos la primera vez:</p>
+        <ul>
+          <li><strong>Fondos nuevos</strong></li>
+          <li><strong>Novedades de la app</strong></li>
+        </ul>
+        <p>Se cierran con <strong>CERRAR</strong>. Esos dos interruptores no apagan los avisos de sesión.</p>
+        <p>Los avisos de sesión los programa la propia app, en hora local del circuito:</p>
+        <ul>
+          <li>24 horas antes, solo de la carrera.</li>
+          <li>1 hora antes, de la carrera, la clasificación y el sprint.</li>
+          <li>15 minutos antes, de cualquier sesión que traiga el calendario.</li>
+        </ul>
+        <p>Ejemplos de título, en español: «Mañana: GP de …», «Falta 1 hora — GP de …», «¡15 minutos! GP de …».</p>
+      </section>
+
+      <section id="sin-conexion">
+        <h2>Sin conexión</h2>
+        <p>Si no hay red, una franja dice: «Sin señal en pits — modo sin conexión». La app sigue mostrando el último calendario, los fondos y la clasificación que haya guardado.</p>
+        <div class="shots">
+          <figure>
+            <img src="capturas/19-sin-conexion.jpg" alt="Aviso de modo sin conexión" width="640" height="1138" loading="lazy" />
+            <figcaption>Sin señal en pits.</figcaption>
+          </figure>
+        </div>
+        <p>Si hay red pero un dato no se pudo refrescar:</p>
+        <ul>
+          <li>Calendario: «Caos en pits. Mostramos el calendario de respaldo.»</li>
+          <li>Fondos: «Los fondos están en el garaje. No pudimos sincronizar.»</li>
+          <li>Clasificación: «La FIA no mandó la clasificación. Desliza hacia abajo para reintentar.»</li>
+        </ul>
+        <p>Si la versión instalada queda por debajo de la mínima, la app no entra a Inicio. Muestra <strong>Pre Start</strong>, <strong>NUEVA VERSIÓN</strong>, un mensaje y el botón <strong>ACTUALIZAR AHORA</strong>. Esa pantalla solo aparece cuando la versión mínima remota es mayor que la instalada.</p>
+      </section>
+    </article>
+  </div>
+
+  <script src="../script.js" defer></script>
+  <script>
+    (function () {
+      var links = document.querySelectorAll(".docs-nav a");
+      var sections = [];
+      links.forEach(function (link) {
+        var id = link.getAttribute("href").slice(1);
+        var section = document.getElementById(id);
+        if (section) sections.push({ link: link, section: section });
+      });
+      function mark() {
+        var current = sections[0];
+        sections.forEach(function (item) {
+          if (item.section.getBoundingClientRect().top < 120) current = item;
+        });
+        links.forEach(function (link) { link.classList.remove("is-active"); });
+        if (current) current.link.classList.add("is-active");
+      }
+      document.addEventListener("scroll", mark, { passive: true });
+      mark();
+      document.querySelectorAll(".docs-menu a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          var menu = link.closest("details");
+          if (menu) menu.open = false;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

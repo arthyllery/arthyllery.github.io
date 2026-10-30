@@ -162,7 +162,20 @@ button {
   transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
+}
+
+.header-guide {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.header-guide:hover {
+  color: var(--red);
 }
 
 .header-inner > .theme-toggle {
@@ -215,6 +228,10 @@ button {
   .header-actions {
     position: static;
     transform: none;
+  }
+
+  .header-guide {
+    display: none;
   }
 
   .header-nav {
