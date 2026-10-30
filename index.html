@@ -28,6 +28,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("prestart_theme");
+        if (theme === "dark" || theme === "light") {
+          document.documentElement.setAttribute("data-theme", theme);
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -35,12 +45,18 @@
     <div class="header-inner">
       <a href="#" class="logo" aria-label="PreStart inicio">PreStart</a>
 
+      <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z" fill="currentColor"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.2V2M12 22v-2.2M4.2 12H2M22 12h-2.2M6.1 6.1 4.6 4.6M19.4 19.4l-1.5-1.5M17.9 6.1l1.5-1.5M4.6 19.4l1.5-1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="3.4" fill="currentColor"/></svg>
+      </button>
       <nav class="header-nav" aria-label="Navegación principal">
         <a href="https://www.instagram.com/arthyllery/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.threads.com/@arthyllery" target="_blank" rel="noopener noreferrer">Threads</a>
         <a href="https://paypal.me/arthyllery" target="_blank" rel="noopener noreferrer">Donar</a>
         <a href="https://github.com/arthyllery/pre-start/releases/latest/download/app-release.apk" class="nav-cta" data-apk-download rel="noopener noreferrer">Descargar</a>
       </nav>
+      </div>
     </div>
   </header>
 

@@ -149,6 +149,54 @@ button {
   object-fit: contain;
 }
 
+.header-actions {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-inner > .theme-toggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-moon,
+:root:not([data-theme="light"]) .theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
 .header-nav {
   display: none;
 }
@@ -156,6 +204,11 @@ button {
 @media (min-width: 900px) {
   .header-inner {
     justify-content: space-between;
+  }
+
+  .header-actions {
+    position: static;
+    transform: none;
   }
 
   .header-nav {
@@ -977,8 +1030,24 @@ button {
   }
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #101010;
+  --surface: #1a1a1a;
+  --surface-soft: #2a1717;
+  --surface-muted: #2a2a2a;
+  --surface-raised: #242424;
+  --text: #f3f3f3;
+  --text-muted: #c8c8c8;
+  --text-soft: #9a9a9a;
+  --border: #333333;
+  --install-line: #5a2424;
+  --header-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  --phone-bg: #0c0c0c;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     color-scheme: dark;
     --bg: #101010;
     --surface: #1a1a1a;
@@ -992,7 +1061,13 @@ button {
     --install-line: #5a2424;
     --header-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
     --phone-bg: #0c0c0c;
-    --red: #ff3030;
-    --red-dark: #ff5a5a;
+  }
+
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun {
+    display: block;
   }
 }

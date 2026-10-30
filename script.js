@@ -456,11 +456,33 @@
       });
   }
 
+  function resolvedTheme() {
+    var chosen = document.documentElement.getAttribute("data-theme");
+    if (chosen === "dark" || chosen === "light") return chosen;
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  }
+
+  function initTheme() {
+    var btn = document.getElementById("themeToggle");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var next = resolvedTheme() === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try {
+        localStorage.setItem("prestart_theme", next);
+      } catch (e) { /* ignore */ }
+    });
+  }
+
   function initEmailJs() {
     if (!window.emailjs || !cfg.emailjs || !cfg.emailjs.publicKey) return;
     window.emailjs.init(cfg.emailjs.publicKey);
   }
 
+  initTheme();
   initConsent();
   initEmailJs();
   initRecaptcha();
