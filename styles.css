@@ -284,20 +284,15 @@ button {
 }
 
 .apk-install {
+  position: relative;
+  z-index: 6;
   width: 100%;
-  max-width: 360px;
-  margin: 18px auto 0;
+  max-width: 277px;
+  margin: 12px auto 0;
   text-align: left;
-  border: 1px solid #f0d0d0;
-  border-radius: 16px;
-  background: linear-gradient(180deg, #fffafa 0%, #ffffff 100%);
-  overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.apk-install[open] {
-  border-color: #ffc9c9;
-  box-shadow: 0 8px 24px rgba(255, 0, 0, 0.06);
+  border: 0;
+  background: transparent;
+  overflow: visible;
 }
 
 .apk-install summary {
@@ -305,14 +300,19 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 14px 16px;
+  height: 54px;
+  padding: 0 8px 0 22px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1.5px solid var(--red);
   cursor: pointer;
   list-style: none;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 14px;
-  color: var(--text);
+  color: var(--red);
   user-select: none;
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.06);
 }
 
 .apk-install summary::-webkit-details-marker {
@@ -351,14 +351,18 @@ button {
   transition: opacity 0.15s ease;
 }
 
-.apk-install[open] .apk-install__chev {
+.apk-install[open] summary {
   background: var(--red);
-  transform: rotate(0deg);
+  color: #fff;
+}
+
+.apk-install[open] .apk-install__chev {
+  background: #fff;
 }
 
 .apk-install[open] .apk-install__chev::before,
 .apk-install[open] .apk-install__chev::after {
-  background: #fff;
+  background: var(--red);
 }
 
 .apk-install[open] .apk-install__chev::after {
@@ -366,7 +370,15 @@ button {
 }
 
 .apk-install__body {
-  padding: 0 16px 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 10px);
+  padding: 14px;
+  background: #fff;
+  border-radius: 28px;
+  border: 1px solid #ffd6d6;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
 .apk-install__steps {
@@ -383,8 +395,8 @@ button {
   align-items: flex-start;
   gap: 12px;
   margin: 0;
-  padding: 12px;
-  border-radius: 12px;
+  padding: 12px 14px;
+  border-radius: 999px;
   background: #fff;
   border: 1px solid #f3f3f3;
   font-size: 13px;
@@ -817,17 +829,17 @@ button {
   }
 
   .store-badge {
-    order: 3;
+    order: 4;
     margin-top: 12px;
   }
 
   .apk-trust {
-    order: 4;
+    order: 5;
   }
 
   .apk-install {
-    order: 5;
-    max-width: 320px;
+    order: 3;
+    margin-top: 12px;
   }
 
   .hero-text {
