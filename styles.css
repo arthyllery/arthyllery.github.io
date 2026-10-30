@@ -412,6 +412,7 @@ button {
   justify-content: center;
   padding: 24px 0 0;
   width: 100%;
+  overflow: visible;
 }
 
 .phones-card {
@@ -421,7 +422,7 @@ button {
   background: var(--red);
   border-radius: var(--radius-card);
   margin-top: clamp(100px, 28vw, 140px);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .phone {
@@ -468,7 +469,8 @@ button {
   padding: 0 20px;
   text-align: center;
   font-size: clamp(30px, 9.5vw, 55px);
-  line-height: 1.12;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
   color: #fff;
   font-family: var(--font-brand);
   z-index: 3;
