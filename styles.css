@@ -34,7 +34,7 @@
   --install-line: #ffd6d6;
   --header-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   --phone-bg: #ffffff;
-  color-scheme: light dark;
+  color-scheme: only light;
 
   --font-brand: "Cubao", "DM Sans", sans-serif;
   --font-logo: "Qurova", "DM Sans", sans-serif;
@@ -118,7 +118,9 @@ button {
   font-weight: 700;
   letter-spacing: -0.01em;
   margin-top: 6px;
-  color: var(--red);
+  color: #ff0000;
+  -webkit-text-fill-color: #ff0000;
+  color-scheme: only light;
   line-height: 1;
 }
 
@@ -1031,7 +1033,7 @@ button {
 }
 
 :root[data-theme="dark"] {
-  color-scheme: dark;
+  color-scheme: only light;
   --bg: #101010;
   --surface: #1a1a1a;
   --surface-soft: #2a1717;
@@ -1048,7 +1050,7 @@ button {
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    color-scheme: dark;
+    color-scheme: only light;
     --bg: #101010;
     --surface: #1a1a1a;
     --surface-soft: #2a1717;
